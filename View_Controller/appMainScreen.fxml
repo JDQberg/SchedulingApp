@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="557.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="96.0" layoutY="14.0" text="Technician Appointment Booking System">
+         <font>
+            <Font name="System Bold Italic" size="31.0" />
+         </font>
+      </Label>
+      <Button layoutX="650.0" layoutY="507.0" mnemonicParsing="false" onMouseClicked="#exitButton" prefHeight="25.0" prefWidth="58.0" text="Exit" />
+      <TableView fx:id="mainScreenAppointmentTableView" layoutX="186.0" layoutY="124.0" prefHeight="182.0" prefWidth="493.0">
+        <columns>
+          <TableColumn fx:id="appointmentViewName" prefWidth="110.0" text="Name" />
+            <TableColumn fx:id="appointmentViewDateStart" prefWidth="95.0" text="Date" />
+            <TableColumn fx:id="appointmentViewStartTime" prefWidth="88.77777099609375" text="Start Time" />
+            <TableColumn fx:id="appointmentViewEndTime" prefWidth="82.666748046875" text="End Time" />
+            <TableColumn fx:id="appointmentViewType" prefWidth="113.888916015625" text="Type" />
+        </columns>
+      </TableView>
+      <VBox layoutX="13.0" layoutY="152.0" prefHeight="367.0" prefWidth="152.0" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" onMouseClicked="#addAppointmentButton" prefWidth="134.0" text="Add Appointment" />
+            <Button mnemonicParsing="false" onMouseClicked="#editAppointmentButton" prefHeight="25.0" prefWidth="134.0" text="Update Appointment" />
+            <Button mnemonicParsing="false" onMouseClicked="#deleteAppointmentButton" prefWidth="134.0" text="Delete Appointment" />
+            <Button mnemonicParsing="false" onMouseClicked="#addCustomerButton" prefHeight="25.0" prefWidth="134.0" text="Add Customer">
+               <VBox.margin>
+                  <Insets top="70.0" />
+               </VBox.margin></Button>
+            <Button mnemonicParsing="false" onMouseClicked="#editCustomerButton" prefHeight="25.0" prefWidth="134.0" text="Update Customer" />
+            <Button mnemonicParsing="false" onMouseClicked="#deleteCustomerButton" prefHeight="25.0" prefWidth="134.0" text="Delete Customer" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <Label layoutX="225.0" layoutY="83.0" text="View Appointments for:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+      <RadioButton fx:id="appointmentViewMonthRBtn" layoutX="518.0" layoutY="85.0" mnemonicParsing="false" onMouseClicked="#selectViewByMonth" text="Month">
+         <toggleGroup>
+            <ToggleGroup fx:id="calendarView" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="appointmentViewWeekRBtn" layoutX="436.0" layoutY="85.0" mnemonicParsing="false" onMouseClicked="#selectViewByWeek" text="Week" toggleGroup="$calendarView" />
+      <TableView fx:id="mainCustomerListTableView" layoutX="186.0" layoutY="341.0" prefHeight="159.0" prefWidth="262.0">
+         <columns>
+            <TableColumn fx:id="mainCustomerNameCol" prefWidth="140.4000244140625" text="Customer Name" />
+            <TableColumn fx:id="mainCustomerPhoneCol" prefWidth="143.5999755859375" text="Phone" />
+         </columns>
+      </TableView>
+      <RadioButton fx:id="appointmentViewAllRBtn" layoutX="605.0" layoutY="85.0" mnemonicParsing="false" onMouseClicked="#selectViewAll" selected="true" text="All" toggleGroup="$calendarView" />
+      <VBox layoutX="509.0" layoutY="366.0" prefHeight="134.0" prefWidth="173.0" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" onMouseClicked="#apptByMonthReport" prefHeight="25.0" prefWidth="158.0" text="Appointments By Month" />
+            <Button mnemonicParsing="false" onMouseClicked="#scheduleReport" prefHeight="25.0" prefWidth="158.0" text="Technician Schedule" />
+            <Button mnemonicParsing="false" onMouseClicked="#totalAppointmentsReport" prefHeight="25.0" prefWidth="158.0" text="Total Appointments" />
+         </children>
+      </VBox>
+      <Label layoutX="555.0" layoutY="331.0" text="Reports">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

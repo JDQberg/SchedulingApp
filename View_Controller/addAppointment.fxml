@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="675.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="customerListTableView" layoutX="83.0" layoutY="107.0" prefHeight="219.0" prefWidth="287.0">
+        <columns>
+          <TableColumn fx:id="addAppointmentCustomerName" prefWidth="169.39996337890625" text="Customer Name" />
+            <TableColumn fx:id="addAppointmentCustomerPhone" prefWidth="113.60003662109375" text="Phone" />
+        </columns>
+      </TableView>
+      <VBox layoutX="421.0" layoutY="93.0" prefHeight="47.0" prefWidth="178.0" spacing="5.0">
+         <children>
+            <Label text="Appointment Date" />
+            <DatePicker fx:id="apptDatePicker" />
+         </children>
+      </VBox>
+      <VBox layoutX="421.0" layoutY="153.0" prefHeight="46.0" prefWidth="214.0" spacing="5.0">
+         <children>
+            <Label text="Appointment Time" />
+            <HBox prefHeight="31.0" prefWidth="492.0" spacing="10.0">
+               <children>
+                  <ComboBox fx:id="apptTimeHrComboBox" prefHeight="25.0" prefWidth="86.0" promptText="Hour" />
+                  <ComboBox fx:id="apptTimeMinComboBox" prefHeight="25.0" prefWidth="86.0" promptText="Minute" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="421.0" layoutY="216.0" prefHeight="65.0" prefWidth="164.0" spacing="5.0">
+         <children>
+            <Label text="Appointment Type" />
+            <ComboBox fx:id="apptTypeComboBox" onAction="#getApptType" prefWidth="150.0" promptText="Type" />
+         </children>
+      </VBox>
+      <VBox layoutX="421.0" layoutY="281.0" prefHeight="65.0" prefWidth="164.0" spacing="5.0">
+         <children>
+            <Label fx:id="apptDescriptionLabel" />
+            <TextField fx:id="apptDescriptionTxtFld" />
+         </children>
+      </VBox>
+      <Label layoutX="214.0" layoutY="38.0" text="Add Appointments">
+         <font>
+            <Font name="System Bold Italic" size="31.0" />
+         </font>
+      </Label>
+      <Button layoutX="577.0" layoutY="351.0" mnemonicParsing="false" onMouseClicked="#addAppointmentExitButton" prefHeight="25.0" prefWidth="58.0" text="Exit" />
+      <Button layoutX="499.0" layoutY="351.0" mnemonicParsing="false" onMouseClicked="#addAppointmentCancelButton" prefHeight="25.0" prefWidth="58.0" text="Cancel" />
+      <Button layoutX="421.0" layoutY="351.0" mnemonicParsing="false" onMouseClicked="#addAppointmentSave" prefHeight="25.0" prefWidth="58.0" text="Save" />
+   </children>
+</AnchorPane>

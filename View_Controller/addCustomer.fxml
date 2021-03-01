@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="412.0" prefWidth="631.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="customerNameTxtFld" layoutX="162.0" layoutY="100.0" prefHeight="25.0" prefWidth="388.0" />
+      <TextField fx:id="customerAddressTxtFld" layoutX="162.0" layoutY="142.0" prefHeight="25.0" prefWidth="388.0" />
+      <TextField fx:id="customerAddress2TxtFld" layoutX="162.0" layoutY="185.0" prefHeight="25.0" prefWidth="388.0" />
+      <TextField fx:id="customerCityTxtFld" layoutX="161.0" layoutY="227.0" />
+      <TextField fx:id="customerPostalCodeTxtFld" layoutX="440.0" layoutY="229.0" prefHeight="25.0" prefWidth="110.0" />
+      <TextField fx:id="customerPhoneTxtFld" layoutX="161.0" layoutY="268.0" />
+      <TextField fx:id="customerCountryTxtFld" layoutX="162.0" layoutY="309.0" prefHeight="25.0" prefWidth="110.0" />
+      <Button layoutX="356.0" layoutY="367.0" mnemonicParsing="false" onMouseClicked="#addCustomerSave" prefHeight="25.0" prefWidth="58.0" text="Save" />
+      <Button layoutX="440.0" layoutY="367.0" mnemonicParsing="false" onMouseClicked="#cancelButton" prefHeight="25.0" prefWidth="58.0" text="Cancel" />
+      <Button layoutX="521.0" layoutY="367.0" mnemonicParsing="false" onMouseClicked="#exitButton" prefHeight="25.0" prefWidth="58.0" text="Exit" />
+      <Label layoutX="325.0" layoutY="226.0" text="Postal Code">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="203.0" layoutY="28.0" prefHeight="46.0" prefWidth="225.0" text="Add Customer">
+         <font>
+            <Font name="System Bold Italic" size="31.0" />
+         </font>
+      </Label>
+      <VBox layoutX="21.0" layoutY="87.0" prefHeight="250.0" prefWidth="135.0" spacing="12.0">
+         <children>
+            <Label prefHeight="30.0" prefWidth="77.0" text="Name">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label prefHeight="30.0" prefWidth="84.0" text="Address">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label prefHeight="30.0" prefWidth="92.0" text="Address 2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label prefHeight="30.0" prefWidth="49.0" text="City">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="Phone">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label text="Country">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</AnchorPane>
